@@ -1,1 +1,1 @@
-Github setup was completed
+Github setup has been completed succesfully.
