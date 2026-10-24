@@ -1,6 +1,19 @@
 # BVG7003 – Assignment 1
 ## REM16 and FT1 Expression Analysis in *Cannabis sativa*
 
+**Contents**
+
+1. [Project Overview](#1-project-overview)
+2. [Dataset](#2-dataset)
+3. [Repository Structure](#3-repository-structure)
+4. [Software and Package Setup](#4-software-and-package-setup)
+5. [How to Run the Analysis](#5-how-to-run-the-analysis)
+6. [Data Quality Checks and Processing](#6-data-quality-checks-and-processing)
+7. [Figures](#7-figures)
+8. [Results and Biological Interpretation](#8-results-and-biological-interpretation)
+9. [Reproducibility and Limitations](#9-reproducibility-and-limitations)
+10. [Video Walkthrough](#10-video-walkthrough)
+
 ### 1. Project Overview
 
 This project investigates the expression patterns of two candidate sex-associated genes in *Cannabis sativa*: **REM16** (`LOC115699937`) and **FT1** (`LOC115696989`).
@@ -163,8 +176,10 @@ Box plots show the median and interquartile range, with whiskers extending to 1.
 
 | Gene | Female (XX) median | Male (XY) median | Valid XX / XY samples | Wilcoxon rank-sum *p* |
 |---|---:|---:|---:|---:|
-| REM16 | 10.50 | 8.68 | 69 / 69 | ≈ 4 × 10⁻²⁴ |
-| FT1 | 6.62 | 6.63 | 68 / 69 | 0.69 |
+| REM16 | 10.50 | 8.68 | 69 / 69 | < 2.2 × 10⁻¹⁶ (W = 4761) |
+| FT1 | 6.62 | 6.63 | 68 / 69 | 0.69 (W = 2252) |
+
+All values in this table are printed to the console by `code/Task3_Analysis.R`.
 
 **REM16** is expressed at higher levels in female than in male plants. The difference in medians is about 1.8 units, which corresponds to roughly a 3.5-fold difference if the presumed log2 scale applies. The two distributions **do not overlap at all**: the lowest female value (10.00) is above the highest male value (9.38). In this dataset, a single expression threshold between these values would classify every plant correctly.
 
