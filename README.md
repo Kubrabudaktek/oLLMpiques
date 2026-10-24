@@ -79,9 +79,9 @@ The analysis was developed and tested with:
 
 | Software | Version |
 |---|---|
-| R | X.X.X |
-| data.table | X.X.X |
-| ggplot2 | X.X.X |
+| R | 4.5.0 |
+| data.table | 1.18.6.1 |
+| ggplot2 | 4.0.3 |
 
 Exact versions can be checked with `sessionInfo()`.
 
