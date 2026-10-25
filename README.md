@@ -100,6 +100,10 @@ Exact versions can be checked with `sessionInfo()`.
 
    Replace the example path with the actual location of the cloned repository.
 
+   If the repository was downloaded as a ZIP file, the extracted folder is named `oLLMpiques-main` (on Windows it may be nested as `oLLMpiques-main/oLLMpiques-main`). Use the inner folder that contains `code/`, `data/` and `README.md`.
+
+   If the script is opened and run directly from `code/`, it detects this and moves to the repository root automatically. If the dataset still cannot be found, it stops with a message showing the current working directory and how to fix it.
+
 3. Confirm that the input dataset and script are available:
 
    ```r

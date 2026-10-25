@@ -14,11 +14,29 @@ library(ggplot2)
 
 # 2. IMPORT DATASET
 
-# Define relative file path
+# Define relative file path (relative to the repository root)
 data_path <- "data/2_Data_RNASeq_Cannabis_Sex.csv"
 
-# Verify that the dataset exists
-stopifnot(file.exists(data_path))
+# Locate the repository root.
+# If the script is run from inside code/ (e.g., after opening the
+# script directly or "Set Working Directory > To Source File Location"),
+# move up one level so all relative paths (data/, figures/) work.
+if (!file.exists(data_path) && file.exists(file.path("..", data_path))) {
+  setwd("..")
+  message("Working directory changed to repository root: ", getwd())
+}
+
+# Stop with a clear message if the dataset still cannot be found
+if (!file.exists(data_path)) {
+  stop(
+    "Input file not found: ", data_path,
+    "\nCurrent working directory: ", getwd(),
+    "\nSet the working directory to the repository root ",
+    "(the folder containing code/, data/ and README.md), ",
+    "then run: source(\"code/Task3_Analysis.R\")",
+    call. = FALSE
+  )
+}
 
 # Import normalized RNA-seq dataset
 data <- fread(data_path, check.names = FALSE)
@@ -565,4 +583,3 @@ print(sessionInfo())
 
 # Final confirmation
 message("Task 3 analysis completed successfully.")
-
