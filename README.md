@@ -203,4 +203,7 @@ All values in this table are printed to the console by `code/Task3_Analysis.R`.
 
 ### 10. Video Walkthrough
 
-A short video walkthrough of the code, figures, and interpretation is available here: [https://ulavaldti-my.sharepoint.com/:f:/r/personal/kubut_ulaval_ca/Documents/BVG7003_Assignment1_KBT?d=w76e1c42d5abe4df782f0d5eb74d95988&csf=1&web=1&e=Sxinzr)
+A short video walkthrough of the code, figures,
+and interpretation is available here:
+
+[Watch the video walkthrough](https://ulavaldti-my.sharepoint.com/:f:/g/personal/kubut_ulaval_ca/IgAtxOF2vlr3TYLw1et02VmIAThyJ4-TDecg5OV8hyyWAxM?e=ZWf4Mo)
